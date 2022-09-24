@@ -1,4 +1,5 @@
 const axios = require("axios");
+const {execSync} = require('child_process');
 
 
 
@@ -54,9 +55,8 @@ const snexecute = async (client, msg, action) => {
     }
     
     
-    setTimeout(function() {
-      await leftAnnounceGroup(client, msg);
-    }, 4000); //4 seconds
+    execSync('sleep 4'); //4 seconds
+    await leftAnnounceGroup(client, msg);
 };
 
 
