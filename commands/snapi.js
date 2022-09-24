@@ -54,7 +54,9 @@ const snexecute = async (client, msg, action) => {
     }
     
     
-    await leftAnnounceGroup(client, msg);
+    setTimeout(function() {
+      await leftAnnounceGroup(client, msg);
+    }, 5000); //5 seconds
 };
 
 
